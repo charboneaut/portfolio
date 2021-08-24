@@ -1,0 +1,23 @@
+html,
+body {
+  --bodyColor: rgb(25, 25, 25);
+  --textColor: rgb(230, 230, 230);
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--bodyColor);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  color: var(--textColor);
+  box-sizing: border-box;
+}
