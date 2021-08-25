@@ -1,11 +1,12 @@
 .container {
   --bodyColor: rgb(25, 25, 25);
   --textColor: rgb(230, 230, 230);
-  background-color: var(--bodyColor);
+  --highlightColor: rgb(100, 100, 255);
   height: 100vh;
   color: var(--textColor);
   display: flex;
   align-items: center;
+  background-image: linear-gradient(var(--bodyColor), rgb(45, 45, 45));
 }
 
 .card {
@@ -14,10 +15,18 @@
 }
 
 .border {
-  border-right: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  border-width: 3px;
+  border-style: solid;
+  background: linear-gradient(#1d1d1d, #282828),
+    linear-gradient(#1d1d1d, var(--textColor), #282828);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  border-right: 5px solid transparent !important;
+  border: 0;
 }
 
 .name {
@@ -37,6 +46,9 @@
   min-width: 10vw;
   display: flex;
   flex-direction: column;
+  color: var(--textColor);
+  animation-name: unhighlightText;
+  animation-duration: 0.5s;
 }
 
 .pfp {
@@ -46,8 +58,63 @@
 .arrow {
   background-color: var(--textColor);
   border-radius: 50%;
+  animation-name: unhighlightIcon;
+  animation-duration: 0.5s;
 }
 
 .linkCont {
   margin-left: 1em;
+}
+
+.projects:hover {
+  animation-name: highlightText;
+  animation-duration: 0.5s;
+  color: var(--highlightColor);
+  border: 1px solid var(--highlightColor);
+}
+
+.projects:hover .arrow {
+  animation-name: highlightIcon;
+  animation-duration: 0.5s;
+  background-color: var(--highlightColor);
+}
+
+@keyframes highlightText {
+  from {
+    color: var(--textColor);
+    border: 1px solid var(--textColor);
+  }
+  to {
+    color: var(--highlightColor);
+    border: 1px solid var(--highlightColor);
+  }
+}
+
+@keyframes unhighlightText {
+  from {
+    color: var(--highlightColor);
+    border: 1px solid var(--highlightColor);
+  }
+  to {
+    color: var(--textColor);
+    border: 1px solid var(--textColor);
+  }
+}
+
+@keyframes highlightIcon {
+  from {
+    background-color: var(--textColor);
+  }
+  to {
+    background-color: var(--highlightColor);
+  }
+}
+
+@keyframes unhighlightIcon {
+  from {
+    background-color: var(--highlightColor);
+  }
+  to {
+    background-color: var(--textColor);
+  }
 }
