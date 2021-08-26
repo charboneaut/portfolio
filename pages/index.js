@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Container className={styles.card}>
         <Row>
-          <Col className={styles.border}>
+          <Col className={styles.info}>
             <Col className={styles.name}>Timothy Charboneau</Col>
             <Col className={styles.title}>Full Stack Software Engineer</Col>
             <a
@@ -42,7 +42,8 @@ export default function Home() {
               </Col>
             </a>
           </Col>
-          <Col>
+          <Col className={styles.border}></Col>
+          <Col className={styles.info}>
             <Image
               src="/../public/me.jpg"
               alt="me"
