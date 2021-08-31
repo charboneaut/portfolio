@@ -9,9 +9,13 @@
   background-image: linear-gradient(var(--bodyColor), rgb(45, 45, 45));
 }
 
-.card {
-  border-radius: 3%;
+.card,
+.fade {
   min-width: 35vw;
+}
+
+.appear {
+  min-width: 60vw;
 }
 
 .border {
@@ -87,6 +91,34 @@
   align-items: flex-end;
 }
 
+.fade {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}
+
+.appear {
+  animation-name: appearIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes appearIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 @keyframes highlightText {
   from {
     color: var(--textColor);
@@ -125,4 +157,12 @@
   to {
     background-color: var(--textColor);
   }
+}
+
+.preview {
+  display: flex;
+}
+
+.proTitle {
+  flex-grow: 1.5;
 }
