@@ -72,37 +72,131 @@ export default function Home() {
       ) : (
         <Container className={fadeClass}>
           <Row>
-            <Col className={styles.projects}>
+            <Col
+              className={styles.projectsFlipped}
+              as={"a"}
+              href={"https://bonsai-one.vercel.app/"}
+            >
               <Col className={styles.preview}>
-                <Col className={styles.proTitle}>This the first project</Col>
-                <Col>This where a picture would be</Col>
+                <Col className={styles.proTitle}>
+                  Bonsai
+                  <Col className={styles.title}>Academic Group Project</Col>
+                  <Col className={styles.title}>To-Do List App</Col>
+                  <Col className={styles.title}>MERN Stack</Col>
+                </Col>
+
+                <Col>
+                  <Image
+                    src="/../public/bonsai.png"
+                    alt="bonsai"
+                    width="500vw"
+                    height="250px"
+                  />
+                </Col>
               </Col>
-              <Col>And then a blurb about it</Col>
+              <Col>
+                My group capstone project at Kenzie. This app keeps track of
+                your tasks; it rewards progress and punishes neglect.
+              </Col>
             </Col>
-            <Col className={styles.projects}>
+            <Col
+              className={styles.projectsFlipped}
+              as={"a"}
+              href={"https://dice-inc.vercel.app/"}
+            >
               <Col className={styles.preview}>
-                <Col className={styles.proTitle}>This the second project</Col>
-                <Col>This where a picture would be</Col>
+                <Col className={styles.proTitle}>
+                  Dice Inc.
+                  <Col className={styles.title}>Personal Project</Col>
+                  <Col className={styles.title}>HTML5 Game</Col>
+                  <Col className={styles.title}>React</Col>
+                </Col>
+                <Col>
+                  <Image
+                    src="/../public/dice.png"
+                    alt="dice"
+                    width="500vw"
+                    height="250px"
+                  />
+                </Col>
               </Col>
-              <Col>And then a blurb about it</Col>
+              <Col>
+                My take on the "Cookie Clicker" style video game. Simple,
+                straightforward & addictive.
+              </Col>
             </Col>
           </Row>
           <Row>
-            <Col className={styles.projects}>
+            <Col
+              as={"a"}
+              href={"https://multable-mk2.vercel.app/"}
+              className={styles.projectsFlipped}
+            >
               <Col className={styles.preview}>
-                <Col className={styles.proTitle}>This the third project</Col>
-                <Col>This where a picture would be</Col>
+                <Col className={styles.proTitle}>
+                  MulTable 2<Col className={styles.title}>Personal Project</Col>
+                  <Col className={styles.title}>Math Tool</Col>
+                  <Col className={styles.title}>React</Col>
+                </Col>
+
+                <Col>
+                  <Image
+                    src="/../public/multable.png"
+                    alt="multable"
+                    width="500vw"
+                    height="250px"
+                  />
+                </Col>
               </Col>
-              <Col>And then a blurb about it</Col>
+              <Col>
+                A custom number mapping/graphing tool; it does more than
+                multiplication.
+              </Col>
             </Col>
-            <Col className={styles.projects}>
+            <Col
+              className={styles.projectsFlipped}
+              as={"a"}
+              href={"https://github.com/charboneaut/big-canuck-bot"}
+            >
               <Col className={styles.preview}>
-                <Col className={styles.proTitle}>This the fourth project</Col>
-                <Col>This where a picture would be</Col>
+                <Col className={styles.proTitle}>
+                  Canuck Bot
+                  <Col className={styles.title}>Solo Project by Request</Col>
+                  <Col className={styles.title}>Discord Bot</Col>
+                  <Col className={styles.title}>Node</Col>
+                </Col>
+
+                <Col>
+                  <Image
+                    src="/../public/canuck.png"
+                    alt="canuck"
+                    width="500vw"
+                    height="250px"
+                  />
+                </Col>
               </Col>
-              <Col>And then a blurb about it</Col>
+              <Col>
+                A discord bot I made for the Code Lateral group discord server,
+                among others. Mostly displays clerical information, but has a
+                few tricks up its sleve.
+              </Col>
             </Col>
           </Row>
+          <Image
+            onClick={() => {
+              setClass(styles.fade);
+              setTimeout(() => {
+                setView(false);
+              }, 500);
+              setTimeout(() => {
+                setClass(styles.appear);
+              }, 450);
+            }}
+            src="/../public/arrow-left-circle.svg"
+            width="64px"
+            height="64px"
+            className={styles.arrowFlip}
+          />
         </Container>
       )}
     </Container>

@@ -39,11 +39,13 @@
 }
 
 .title {
+  font-size: medium;
   font-style: italic;
   color: rgb(150, 150, 150);
 }
 
-.projects {
+.projects,
+.projectsFlipped {
   flex-grow: 2;
   border: 1px solid var(--textColor);
   border-radius: 2%;
@@ -56,12 +58,19 @@
   animation-duration: 0.5s;
 }
 
-.pfp {
-  border-radius: 2%;
+.projectsFlipped {
+  padding: 1rem;
 }
 
-.arrow {
+.pfp {
+  border-radius: 2%;
+  flex-grow: -1;
+}
+
+.arrow,
+.arrowFlip {
   background-color: var(--textColor);
+  border: 2px solid white !important;
   border-radius: 50%;
   animation-name: unhighlightIcon;
   animation-duration: 0.5s;
@@ -71,14 +80,16 @@
   margin-left: 1em;
 }
 
-.projects:hover {
+.projects:hover,
+.projectsFlipped:hover {
   animation-name: highlightText;
   animation-duration: 0.5s;
   color: var(--highlightColor);
   border: 1px solid var(--highlightColor);
 }
 
-.projects:hover .arrow {
+.projects:hover .arrow,
+.arrowFlip:hover {
   animation-name: highlightIcon;
   animation-duration: 0.5s;
   background-color: var(--highlightColor);
@@ -165,4 +176,5 @@
 
 .proTitle {
   flex-grow: 1.5;
+  font-size: x-large;
 }
