@@ -11,11 +11,15 @@
 
 .card,
 .fade {
-  min-width: 35vw;
+  min-width: 33vw;
 }
 
 .appear {
   min-width: 60vw;
+}
+
+.revAppear {
+  min-width: 35w;
 }
 
 .border {
@@ -76,6 +80,14 @@
   animation-duration: 0.5s;
 }
 
+.back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 .linkCont {
   margin-left: 1em;
 }
@@ -107,7 +119,8 @@
   animation-duration: 0.5s;
 }
 
-.appear {
+.appear,
+.revAppear {
   animation-name: appearIn;
   animation-duration: 0.5s;
 }

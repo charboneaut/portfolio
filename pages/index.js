@@ -27,7 +27,7 @@ export default function Home() {
                 <Col className={styles.linkCont}>Visit my GitHub </Col>
                 <Col className={styles.linkCont}>
                   <Image
-                    src="/../public/arrow-left-circle.svg"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993355123331172/arrow-left-circle.svg"
                     width="32px"
                     height="32px"
                     className={styles.arrow}
@@ -49,7 +49,7 @@ export default function Home() {
                 <Col className={styles.linkCont}>View my Projects</Col>
                 <Col className={styles.linkCont}>
                   <Image
-                    src="/../public/arrow-left-circle.svg"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993355123331172/arrow-left-circle.svg"
                     width="32px"
                     height="32px"
                     className={styles.arrow}
@@ -60,7 +60,7 @@ export default function Home() {
             <Col className={styles.border}></Col>
             <Col className={styles.info}>
               <Image
-                src="/../public/me.jpg"
+                src="https://cdn.discordapp.com/attachments/773520153848709141/886172628224704552/TCNHBFEG3-U015DAGLE21-0645e074ee23-512.jpg"
                 alt="me"
                 width="256px"
                 height="256px"
@@ -87,7 +87,7 @@ export default function Home() {
 
                 <Col>
                   <Image
-                    src="/../public/bonsai.png"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993787728068668/bonsai.png"
                     alt="bonsai"
                     width="500vw"
                     height="250px"
@@ -113,7 +113,7 @@ export default function Home() {
                 </Col>
                 <Col>
                   <Image
-                    src="/../public/dice.png"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993808049451079/dice.png"
                     alt="dice"
                     width="500vw"
                     height="250px"
@@ -141,7 +141,7 @@ export default function Home() {
 
                 <Col>
                   <Image
-                    src="/../public/multable.png"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993818786885723/multable.png"
                     alt="multable"
                     width="500vw"
                     height="250px"
@@ -168,7 +168,7 @@ export default function Home() {
 
                 <Col>
                   <Image
-                    src="/../public/canuck.png"
+                    src="https://cdn.discordapp.com/attachments/773520153848709141/886993833068470272/canuck.PNG"
                     alt="canuck"
                     width="500vw"
                     height="250px"
@@ -178,25 +178,27 @@ export default function Home() {
               <Col>
                 A discord bot I made for the Code Lateral group discord server,
                 among others. Mostly displays clerical information, but has a
-                few tricks up its sleve.
+                few tricks up its sleeve.
               </Col>
             </Col>
           </Row>
-          <Image
-            onClick={() => {
-              setClass(styles.fade);
-              setTimeout(() => {
-                setView(false);
-              }, 500);
-              setTimeout(() => {
-                setClass(styles.appear);
-              }, 450);
-            }}
-            src="/../public/arrow-left-circle.svg"
-            width="64px"
-            height="64px"
-            className={styles.arrowFlip}
-          />
+          <div className={styles.back}>
+            <Image
+              onClick={() => {
+                setClass(styles.fade);
+                setTimeout(() => {
+                  setView(false);
+                }, 500);
+                setTimeout(() => {
+                  setClass(styles.revAppear);
+                }, 500);
+              }}
+              src="https://cdn.discordapp.com/attachments/773520153848709141/886993355123331172/arrow-left-circle.svg"
+              width="64px"
+              height="64px"
+              className={styles.arrowFlip}
+            />
+          </div>
         </Container>
       )}
     </Container>
